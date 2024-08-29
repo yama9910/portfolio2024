@@ -1,47 +1,99 @@
-# Welcome to Remix + Cloudflare!
+# portfolio2024
 
-- 📖 [Remix docs](https://remix.run/docs)
-- 📖 [Remix Cloudflare docs](https://remix.run/guides/vite#cloudflare)
+## コマンド一覧
 
-## Development
+#### 環境構築
 
-Run the dev server:
+**クローン**
+```bash
+git clone https://github.com/yama9910/portfolio2024
+```
+
+**依存関係をインストール**  
+```bash
+pnpm i
+```
+
+#### 開発サーバー起動
+```bash
+pnpm dev
+```
+
+#### ビルド
+```bash
+pnpm build
+```
+
+#### 検証サーバ起動
+```bash
+pnpm start
+```
+
+## コマンドのユースケース
+### 初期クローン時 && 依存関係の更新時
+```bash
+pnpm i    # 依存関係をインストール（しなおす）
+pnpm dev  # 開発サーバを試しに立ち上げる
+```
+
+### 検証サーバ（ビルド後画面）でページプレビュー
+```bash
+pnpm i      # 依存関係をインストール（しなおす）
+pnpm build  # ビルド
+pnpm start  # wranglerでビルドをローカルサーバにデプロイ
+```
+
+## 公式README
+
+<details>
+<summary>Remix + Cloudflare へようこそ！</summary>
+
+# Remix + Cloudflare へようこそ！
+
+- 📖 [Remix ドキュメント](https://remix.run/docs)
+- 📖 [Remix Cloudflare ドキュメント](https://remix.run/guides/vite#cloudflare)
+
+## 開発
+
+開発サーバーを起動するには、以下を実行します：
 
 ```sh
 npm run dev
 ```
 
-To run Wrangler:
+Wrangler を実行するには、以下を実行します：
 
 ```sh
 npm run build
 npm run start
 ```
 
-## Typegen
+## 型定義生成
 
-Generate types for your Cloudflare bindings in `wrangler.toml`:
+`wrangler.toml` にある Cloudflare バインディングの型を生成するには、以下を実行します：
 
 ```sh
 npm run typegen
 ```
 
-You will need to rerun typegen whenever you make changes to `wrangler.toml`.
+`wrangler.toml` に変更を加えた際は、再度 typegen を実行する必要があります。
 
-## Deployment
+## デプロイ
 
-First, build your app for production:
+まず、アプリを本番環境用にビルドします：
 
 ```sh
 npm run build
 ```
 
-Then, deploy your app to Cloudflare Pages:
+次に、アプリを Cloudflare Pages にデプロイします：
 
 ```sh
 npm run deploy
 ```
 
-## Styling
+## スタイリング
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+このテンプレートには、簡単なデフォルト設定が施された [Tailwind CSS](https://tailwindcss.com/) がすでに含まれています。お好みの CSS フレームワークを使用できます。詳細は [Vite の CSS に関するドキュメント](https://vitejs.dev/guide/features.html#css) を参照してください。
+
+</details>
